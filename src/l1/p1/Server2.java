@@ -2,6 +2,7 @@ package l1.p1;
 
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Date;
 import java.util.Scanner;
 import java.io.InputStream;
 
@@ -12,15 +13,11 @@ class Server2 {
 		InputStream is = s.getInputStream();
 		Scanner sc = new Scanner(is);
 		
-		while (sc.hasNext()){
-			System.out.println(sc.nextLine());
+		while (sc.hasNextLine()){
+			String test = sc.nextLine();
+			System.out.println(test);
 		}
 		
-//		int c = is.read();
-//		while (c != -1) {
-//			System.out.print((char) c);
-//			c = is.read();
-//		}
 		sc.close();
 		s.close();
 		ss.close();
