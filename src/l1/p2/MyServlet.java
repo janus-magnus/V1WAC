@@ -19,6 +19,7 @@ class MyServlet extends Thread {
 		InputStream is;
 		OutputStream os;
 		try {
+			Thread.sleep(1000);
 			is = sock.getInputStream();
 			os = sock.getOutputStream();
 			Scanner sc = new Scanner(is);
@@ -34,7 +35,7 @@ class MyServlet extends Thread {
 					break;
 				}
 			}
-		} catch (IOException e) {
+		} catch (IOException | InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
