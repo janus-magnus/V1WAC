@@ -2,7 +2,6 @@ package l1.p1;
 
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Date;
 import java.util.Scanner;
 import java.io.InputStream;
 
